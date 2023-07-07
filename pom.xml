@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--以下の内容を追加する-->
+    <modelVersion>4.0.0</modelVersion><!--modelversion-->
+
+    <groupId>org.example</groupId><!--識別子-->
+    <artifactId>Servlet</artifactId><!--プロジェクトの成果物（JARやWARなど）の名前として使用される。-->
+    <version>1.0-SNAPSHOT</version>
+    <!--??????????????????-->
+    <build>
+        <plugins>
+            <!-- 他のプラグイン -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId><!---->
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version> <!-- 使用したいバージョンに変更可能 -->
+                <configuration>
+                    <source>20</source>
+                    <target>20</target>
+                </configuration>
+            </plugin>
+            <!-- 他のプラグイン -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.12.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+            <!--3-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.3</version>
+            </plugin>
+        </plugins>
+    </build>
+    <!--df-->
+
+    <properties><!--プロジェクトで使用されるproperty-->
+        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>20</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <!--  依存関係の追加　最初追加したときは赤くなる。-->
+    <!--　上記の後cmdの場合、下記のcmdを実行する-->
+    <!--　mvn clean install-->
+<dependencies>
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>4.0.1</version> <!-- 最新のバージョンに変更可能 -->
+        <scope>provided</scope>
+    </dependency>
+
+</dependencies>
+    <!--　追加する要素の終わり　-->
+</project>

@@ -1,0 +1,41 @@
+Tomcatの事前準備
+システム環境変数　新規で追加（インストール先をやる JREについては分からん）
+JAVA_HOME
+C:\Program Files\Java\jdk-20
+JRE_HOME
+C:\Program Files\Java\jdk-20
+
+Tomcatについては事前インストール
+
+起動方法
+Tomcatインストールファイルのstartup.batをダブルクリック
+なんも出なかったら　cmdでやる階層をファイルのある場所に移動する
+
+
+backgroundでの稼働
+cmdで
+service.bat install Tomcat10
+
+サービスで確認
+Apache Tomcat 8.5 Tomcat10
+
+log
+Microsoft Windows [Version 10.0.22621.1848]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\pleiades\2023-03\xampp\tomcat>service.bat install Tomcat10
+'service.bat' は、内部コマンドまたは外部コマンド、
+操作可能なプログラムまたはバッチ ファイルとして認識されていませ ん。
+
+C:\pleiades\2023-03\xampp\tomcat>cd bin
+
+C:\pleiades\2023-03\xampp\tomcat\bin>service.bat install Tomcat10
+Installing the service 'Tomcat10' ...
+Using CATALINA_HOME:    "C:\pleiades\2023-03\xampp\tomcat"
+Using CATALINA_BASE:    "C:\pleiades\2023-03\xampp\tomcat"
+Using JAVA_HOME:        "C:\Program Files\Java\jdk-20"
+Using JRE_HOME:         "C:\Program Files\Java\jdk-20"
+Using JVM:              "C:\Program Files\Java\jdk-20\bin\server\jvm.dll"
+The service 'Tomcat10' has been installed.
+
+C:\pleiades\2023-03\xampp\tomcat\bin>
